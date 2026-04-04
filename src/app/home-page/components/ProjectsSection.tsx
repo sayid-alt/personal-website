@@ -3,7 +3,6 @@
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
 
-
 const projects = [
   {
     id: 1,
