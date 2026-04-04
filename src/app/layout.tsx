@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata, Viewport } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import '../styles/tailwind.css';
 
 export const viewport: Viewport = {
@@ -14,11 +15,11 @@ export const metadata: Metadata = {
     'Portfolio of Sayid Muhammad Sayid, a Jakarta-based Data Analyst and Scientist specializing in machine learning, predictive modeling, and data visualization.',
   icons: [
     {
-        url: 'https://www.datascienceportfol.io/static/profile_pics/pr0_AFACD359DB7FE2B9118D.jpg',
-        href: 'https://www.datascienceportfol.io/static/profile_pics/pr0_AFACD359DB7FE2B9118D.jpg',
-        type: 'image/jpeg', // Matches the actual file extension
-      },
-  ]
+      url: 'https://www.datascienceportfol.io/static/profile_pics/pr0_AFACD359DB7FE2B9118D.jpg',
+      href: 'https://www.datascienceportfol.io/static/profile_pics/pr0_AFACD359DB7FE2B9118D.jpg',
+      type: 'image/jpeg', // Matches the actual file extension
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+        <Analytics />
 
         {/* <script
           type="module"
