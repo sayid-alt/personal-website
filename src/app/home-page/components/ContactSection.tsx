@@ -1,54 +1,54 @@
-"use client";
+'use client';
 
-import React, { useEffect, useRef } from "react";
-import Icon from "@/components/ui/AppIcon";
+import React, { useEffect, useRef } from 'react';
+import Icon from '@/components/ui/AppIcon';
 
 const contactLinks = [
   {
-    label: "LinkedIn",
-    handle: "/in/sayidheykal",
-    href: "https://linkedin.com/in/sayidheykal",
-    icon: "LinkIcon",
-    accent: "#22D3EE",
-    description: "Connect professionally",
+    label: 'LinkedIn',
+    handle: '/in/sayidheykal',
+    href: 'https://linkedin.com/in/sayidheykal',
+    icon: 'linkedin.png',
+    accent: '#0077b5',
+    description: 'Connect professionally',
   },
   {
-    label: "Project Links",
-    handle: "/heykalsayid",
-    href: "https://datascienceportfol.io/heykalsayid",
-    icon: "LinkIcon",
-    accent: "#0b76c8ff",
-    description: "Dive Into Projects",
+    label: 'Project Site',
+    handle: '/heykalsayid',
+    href: 'https://datascienceportfol.io/heykalsayid',
+    icon: 'LinkIcon',
+    accent: '#22D3EE',
+    description: 'Dive Into Projects',
   },
   {
-    label: "GitHub",
-    handle: "/sayid-alt",
-    href: "https://github.com/sayid-alt",
-    icon: "CodeBracketIcon",
-    accent: "#A78BFA",
-    description: "Browse my repositories",
+    label: 'GitHub',
+    handle: '/sayid-alt',
+    href: 'https://github.com/sayid-alt',
+    icon: 'CodeBracketIcon',
+    accent: '#A78BFA',
+    description: 'Browse my repositories',
   },
   {
-    label: "Email",
-    handle: "heykalsayid@gmail.com",
-    href: "mailto:heykalsayid@gmail.com",
-    icon: "EnvelopeIcon",
-    accent: "#F59E0B",
-    description: "Send a direct message",
+    label: 'Email',
+    handle: 'heykalsayid@gmail.com',
+    href: 'mailto:heykalsayid@gmail.com',
+    icon: 'EnvelopeIcon',
+    accent: '#F59E0B',
+    description: 'Send a direct message',
   },
 ];
 
 export default function ContactSection() {
-  const revealRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const revealRefs = useRef<(HTMLDivElement | HTMLAnchorElement | null)[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("visible");
+          if (entry.isIntersecting) entry.target.classList.add('visible');
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
     revealRefs.current.forEach((el) => {
       if (el) observer.observe(el);
@@ -65,7 +65,7 @@ export default function ContactSection() {
         className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-96 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(34,211,238,0.05) 0%, transparent 70%)",
+            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(34,211,238,0.05) 0%, transparent 70%)',
         }}
       />
 
@@ -90,18 +90,17 @@ export default function ContactSection() {
             <span
               className="text-transparent"
               style={{
-                backgroundImage:
-                  "linear-gradient(135deg, #22D3EE 0%, #67E8F9 50%, #F59E0B 100%)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
+                backgroundImage: 'linear-gradient(135deg, #22D3EE 0%, #67E8F9 50%, #F59E0B 100%)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
               }}
             >
               together
             </span>
           </h2>
           <p className="text-[#64748B] text-base max-w-md mx-auto">
-            Open to full-time data analyst and data scientist roles, freelance
-            projects, and research collaborations.
+            Open to full-time data analyst and data scientist roles, freelance projects, and
+            research collaborations.
           </p>
         </div>
 
@@ -118,8 +117,8 @@ export default function ContactSection() {
 
           <div className="relative z-10">
             <p className="text-[#94A3B8] text-lg mb-6 max-w-sm mx-auto">
-              Whether it&apos;s a data challenge, a modeling project, or a team
-              you&apos;re building — I&apos;d love to hear from you.
+              Whether it&apos;s a data challenge, a modeling project, or a team you&apos;re building
+              — I&apos;d love to hear from you.
             </p>
             <a
               href="mailto:heykalsayid@gmail.com"
@@ -137,10 +136,8 @@ export default function ContactSection() {
             <a
               key={link.label}
               href={link.href}
-              target={link.href.startsWith("http") ? "_blank" : undefined}
-              rel={
-                link.href.startsWith("http") ? "noopener noreferrer" : undefined
-              }
+              target={link.href.startsWith('http') ? '_blank' : undefined}
+              rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               ref={(el) => {
                 revealRefs.current[2 + i] = el;
               }}
@@ -151,23 +148,17 @@ export default function ContactSection() {
                 style={{ background: `${link.accent}15` }}
               >
                 <Icon
-                  name={link.icon as Parameters<typeof Icon>[0]["name"]}
+                  name={link.icon as Parameters<typeof Icon>[0]['name']}
                   size={18}
                   style={{ color: link.accent }}
                 />
               </div>
               <div className="min-w-0">
-                <p className="text-sm font-semibold text-[#E2E8F0] mb-0.5">
-                  {link.label}
-                </p>
+                <p className="text-sm font-semibold text-[#E2E8F0] mb-0.5">{link.label}</p>
                 <p className="text-xs text-[#475569] truncate">{link.handle}</p>
               </div>
               <div className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Icon
-                  name="ArrowTopRightOnSquareIcon"
-                  size={14}
-                  className="text-[#475569]"
-                />
+                <Icon name="ArrowTopRightOnSquareIcon" size={14} className="text-[#475569]" />
               </div>
               {/* Accent bottom line */}
               <div

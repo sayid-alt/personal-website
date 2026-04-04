@@ -7,26 +7,24 @@ import Icon from "@/components/ui/AppIcon";
 const stats = [
   { value: "4+", label: "ML Projects" },
   { value: "3.68", label: "GPA / 4.00" },
-  { value: "82%", label: "MSE Reduction" },
+  { value: "6000+", label: "Data Processed" },
 ];
 
 const socialLinks = [
   {
-    label: "Projects",
-    href: "https://www.datascienceportfol.io/heykalsayid",
-    icon: "LinkIcon",
-  },
-  {
+    id: 2,
     label: "LinkedIn",
     href: "https://linkedin.com/in/sayidheykal",
-    icon: "LinkIcon",
+    icon: "linkedin-white.png",
   },
   {
+    id: 3,
     label: "GitHub",
     href: "https://github.com/sayid-alt",
-    icon: "CodeBracketIcon",
+    icon: "github.svg",
   },
   {
+    id: 4,
     label: "Email",
     href: "mailto:heykalsayid@gmail.com",
     icon: "EnvelopeIcon",
@@ -35,7 +33,7 @@ const socialLinks = [
 
 export default function HeroSection() {
   const blobRef1 = useRef<HTMLDivElement>(null);
-  const blobRef2 = useRef<HTMLDivide>(null);
+  const blobRef2 = useRef<HTMLDivElement>(null);
 
   return (
     <section
@@ -187,31 +185,18 @@ export default function HeroSection() {
                   "fadeInUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.65s both",
               }}
             >
-              <a
-                href="https://linkedin.com/in/sayidheykal"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-card w-9 h-9 rounded-full flex items-center justify-center text-[#94A3B8] hover:text-[#22D3EE] hover:border-[#22D3EE]/30 transition-all duration-300 hover:-translate-y-1"
-                aria-label="LinkedIn profile"
-              >
-                <Icon name="LinkIcon" size={15} />
-              </a>
-              <a
-                href="https://github.com/sayid-alt"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass-card w-9 h-9 rounded-full flex items-center justify-center text-[#94A3B8] hover:text-[#22D3EE] hover:border-[#22D3EE]/30 transition-all duration-300 hover:-translate-y-1"
-                aria-label="GitHub profile"
-              >
-                <Icon name="CodeBracketIcon" size={15} />
-              </a>
-              <a
-                href="mailto:heykalsayid@gmail.com"
-                className="glass-card w-9 h-9 rounded-full flex items-center justify-center text-[#94A3B8] hover:text-[#22D3EE] hover:border-[#22D3EE]/30 transition-all duration-300 hover:-translate-y-1"
-                aria-label="Email Sayid"
-              >
-                <Icon name="EnvelopeIcon" size={15} />
-              </a>
+              {socialLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card w-9 h-9 rounded-full flex items-center justify-center text-[#94A3B8] hover:text-[#22D3EE] hover:border-[#22D3EE]/30 transition-all duration-300 hover:-translate-y-1"
+                  aria-label={link.label}
+                >
+                  <Icon name={link.icon} size={15} variant="solid" className="text-white"/>
+                </a>
+              ))}
             </div>
           </div>
 

@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import AppImage from "@/components/ui/AppImage";
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import AppImage from '@/components/ui/AppImage';
 
 const navLinks = [
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: 'Projects', href: '#projects' },
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export default function Header() {
@@ -17,18 +17,18 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
     if (menuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     }
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     };
   }, [menuOpen]);
 
@@ -38,9 +38,7 @@ export default function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "bg-[#070B14]/90 backdrop-blur-xl border-b border-white/5"
-            : "bg-transparent"
+          scrolled ? 'bg-[#070B14]/90 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'
         }`}
       >
         <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -84,18 +82,18 @@ export default function Header() {
           <button
             className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 relative z-50"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
             <span
-              className={`block w-5 h-px bg-[#E2E8F0] transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+              className={`block w-5 h-px bg-[#E2E8F0] transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
             />
 
             <span
-              className={`block w-5 h-px bg-[#E2E8F0] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+              className={`block w-5 h-px bg-[#E2E8F0] transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}
             />
 
             <span
-              className={`block w-5 h-px bg-[#E2E8F0] transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              className={`block w-5 h-px bg-[#E2E8F0] transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
             />
           </button>
         </nav>

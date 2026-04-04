@@ -23,7 +23,7 @@ const skills = [
 const achievements = [
   { value: '82.11%', label: 'MSE Reduction in exchange rate forecasting model' },
   { value: '3.68', label: 'GPA from University of Muhammadiyah Prof. DR. Hamka' },
-  { value: '12', label: 'Distinct behavioral clusters in alumni segmentation project' },
+  { value: '6000+', label: 'Raw data used to be preprocessed, analyzed, and visualized' },
   { value: '23 yrs', label: 'Historical data used in deep learning time-series model' },
 ];
 
@@ -42,17 +42,14 @@ export default function AboutSkillsSection() {
       },
       { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
-    revealRefs.current.forEach((el) => { if (el) observer.observe(el); });
+    revealRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section
-      id="about"
-      ref={sectionRef}
-      className="py-24 relative"
-      aria-label="About and Skills"
-    >
+    <section id="about" ref={sectionRef} className="py-24 relative" aria-label="About and Skills">
       {/* Divider */}
       <div className="section-divider mb-24" />
 
@@ -68,7 +65,9 @@ export default function AboutSkillsSection() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
         <div
-          ref={(el) => { revealRefs.current[0] = el; }}
+          ref={(el) => {
+            revealRefs.current[0] = el;
+          }}
           className="reveal mb-16"
         >
           <div className="flex items-center gap-3 mb-4">
@@ -96,14 +95,22 @@ export default function AboutSkillsSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: Bio + Achievements */}
           <div
-            ref={(el) => { revealRefs.current[1] = el; }}
+            ref={(el) => {
+              revealRefs.current[1] = el;
+            }}
             className="reveal reveal-delay-1"
           >
             <p className="text-[#94A3B8] text-base leading-relaxed mb-8">
-              As a highly motivated Informatics Engineering fresh graduate from the University of Muhammadiyah Prof. DR. Hamka, I&apos;ve developed strong capabilities in data analytics, machine learning, and data visualization through academic research and organizational experience.
+              As a highly motivated Informatics Engineering fresh graduate from the University of
+              Muhammadiyah Prof. DR. Hamka, I&apos;ve developed strong capabilities in data
+              analytics, machine learning, and data visualization through academic research and
+              organizational experience.
             </p>
             <p className="text-[#94A3B8] text-base leading-relaxed mb-10">
-              I combine technical rigor—developing high-accuracy exchange rate forecasting models—with business acumen in churn reduction and stakeholder reporting. I&apos;m adept at bridging the gap between raw data and executive decision-making through structured reporting and collaborative project management.
+              I combine technical rigor—developing high-accuracy exchange rate forecasting
+              models—with business acumen in churn reduction and stakeholder reporting. I&apos;m
+              adept at bridging the gap between raw data and executive decision-making through
+              structured reporting and collaborative project management.
             </p>
 
             {/* Achievement stats grid */}
@@ -132,7 +139,9 @@ export default function AboutSkillsSection() {
 
           {/* Right: Skills */}
           <div
-            ref={(el) => { revealRefs.current[2] = el; }}
+            ref={(el) => {
+              revealRefs.current[2] = el;
+            }}
             className="reveal reveal-delay-2"
           >
             <div className="glass-card rounded-3xl p-8">
