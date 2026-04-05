@@ -37,4 +37,4 @@ jest-test-results.json
 turbo/
 
 
-.env/*
+.env
