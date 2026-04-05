@@ -6,6 +6,7 @@ import ProjectsSection from './components/ProjectsSection';
 import AboutSkillsSection from './components/AboutSkillsSection';
 import ExperienceEducationSection from './components/ExperienceEducationSection';
 import ContactSection from './components/ContactSection';
+import ChatbotWidget from '@/components/ChatbotWidget';
 
 export default function HomePage() {
   return (
@@ -22,6 +23,7 @@ export default function HomePage() {
       <ContactSection />
 
       <Footer />
+      <ChatbotWidget />
     </main>
   );
 }

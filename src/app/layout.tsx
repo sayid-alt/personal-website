@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import '../styles/tailwind.css';
+import { Toaster } from 'react-hot-toast';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -32,6 +33,17 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
+        <Toaster
+          position="bottom-left"
+          toastOptions={{
+            style: {
+              background: '#0D1526',
+              color: '#E2E8F0',
+              border: '1px solid rgba(34,211,238,0.2)',
+              fontSize: '14px',
+            },
+          }}
+        />
 
         {/* <script
           type="module"
