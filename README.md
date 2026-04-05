@@ -28,7 +28,8 @@ A modern Next.js 15 application built with TypeScript and Tailwind CSS.
 ## 📁 Project Structure
 
 ```
-nextjs/
+```
+personal-website/
 ├── public/             # Static assets
 ├── src/
 │   ├── app/            # App router components
@@ -36,10 +37,16 @@ nextjs/
 │   │   └── page.tsx    # Main page component
 │   ├── components/     # Reusable UI components
 │   ├── styles/         # Global styles and Tailwind configuration
+├── node_modules/       # Dependencies
+├── .next/              # Next.js build output
 ├── next.config.mjs     # Next.js configuration
 ├── package.json        # Project dependencies and scripts
+├── package-lock.json   # Dependency lock file
 ├── postcss.config.js   # PostCSS configuration
-└── tailwind.config.js  # Tailwind CSS configuration
+├── tailwind.config.js  # Tailwind CSS configuration
+├── tsconfig.json       # TypeScript configuration
+└── README.md           # Project documentation
+```
 
 ```
 
