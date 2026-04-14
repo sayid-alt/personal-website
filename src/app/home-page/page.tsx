@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection';
 import ProjectsSection from './components/ProjectsSection';
 import AboutSkillsSection from './components/AboutSkillsSection';
 import ExperienceEducationSection from './components/ExperienceEducationSection';
+import BootcampSection from './components/BootcampSection';
 import ContactSection from './components/ContactSection';
 import ChatbotWidget from '@/components/ChatbotWidget';
 
@@ -20,6 +21,7 @@ export default function HomePage() {
       <ProjectsSection />
       <AboutSkillsSection />
       <ExperienceEducationSection />
+      <BootcampSection />
       <ContactSection />
 
       <Footer />

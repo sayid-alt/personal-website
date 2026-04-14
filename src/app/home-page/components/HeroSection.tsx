@@ -5,9 +5,9 @@ import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 
 const stats = [
-  { value: '4+', label: 'ML Projects' },
+  { value: '3+', label: 'ML Projects' },
   { value: '3.68', label: 'GPA / 4.00' },
-  { value: '6000+', label: 'Data Processed' },
+  { value: '6000+', label: 'Raw Data Processed' },
 ];
 
 const socialLinks = [
