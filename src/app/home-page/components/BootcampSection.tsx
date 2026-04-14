@@ -234,7 +234,7 @@ export default function ExperienceEducationSection() {
 
 
   return (
-    <section id="experience" className="py-24 relative" aria-label="Experience and Education">
+    <section id="bootcamps" className="py-24 relative" aria-label="Experience and Education">
       <div className="section-divider mb-24" />
 
       <div
