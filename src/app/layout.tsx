@@ -11,9 +11,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  title: 'Sayid Muhammad Sayid — Data Analyst & Scientist',
+  title: 'Sayid Muhammad Heykal — Data Analyst & Scientist',
   description:
-    'Portfolio of Sayid Muhammad Sayid, a Jakarta-based Data Analyst and Scientist specializing in machine learning, predictive modeling, and data visualization.',
+    'Portfolio of Sayid Muhammad Heykal, a Jakarta-based Data Analyst and Scientist specializing in machine learning, predictive modeling, and data visualization.',
   icons: [
     {
       url: 'https://www.datascienceportfol.io/static/profile_pics/pr0_AFACD359DB7FE2B9118D.jpg',
