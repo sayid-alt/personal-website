@@ -209,7 +209,7 @@ export default function HeroSection() {
               {/* Photo */}
               <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-[#22D3EE]/30 shadow-[0_0_40px_rgba(34,211,238,0.15)]">
                 <AppImage
-                  src="https://media.licdn.com/dms/image/v2/D5603AQGp8uBCV1DgLw/profile-displayphoto-scale_400_400/B56Z2byQzTKsAg-/0/1776435141008?e=1778112000&v=beta&t=SQ_Lk2xJYO8lhbof3lt1bx2-OvC4Ltjfgfjz8WaEHk4"
+                  src="/assets/images/profile.png"
                   alt="Sayid Muhammad Sayid - Data Analyst and Scientist based in Jakarta"
                   width={224}
                   height={224}
