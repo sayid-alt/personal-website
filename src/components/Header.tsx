@@ -47,7 +47,7 @@ export default function Header() {
           <Link href="/home-page" className="flex items-center gap-3 group">
             <div className="w-8 h-8 rounded-full overflow-hidden border border-white/10 group-hover:border-[#22D3EE]/40 transition-colors duration-300">
               <AppImage
-                src="https://www.datascienceportfol.io/static/profile_pics/pr0_AFACD359DB7FE2B9118D.jpg"
+                src="https://media.licdn.com/dms/image/v2/D5603AQGp8uBCV1DgLw/profile-displayphoto-scale_400_400/B56Z2byQzTKsAg-/0/1776435141008?e=1778112000&v=beta&t=SQ_Lk2xJYO8lhbof3lt1bx2-OvC4Ltjfgfjz8WaEHk4"
                 alt="Sayid Muhammad Heykal profile photo"
                 width={32}
                 height={32}
