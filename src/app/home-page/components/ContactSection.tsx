@@ -13,11 +13,11 @@ const contactLinks = [
     description: 'Connect professionally',
   },
   {
-    label: 'Project Site',
+    label: 'Medium',
     handle: '/heykalsayid',
-    href: 'https://datascienceportfol.io/heykalsayid',
-    icon: 'LinkIcon',
-    accent: '#22D3EE',
+    href: 'https://medium.com/@heykalsayid',
+    icon: 'medium.png',
+    accent: '#4b4f50',
     description: 'Dive Into Projects',
   },
   {

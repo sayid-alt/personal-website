@@ -15,6 +15,14 @@ export default function Footer() {
             LinkedIn
           </a>
           <a
+            href="https://medium.com/@heykalsayid"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#475569] hover:text-[#22D3EE] text-sm font-medium transition-colors duration-300"
+          >
+            Medium
+          </a>
+          <a
             href="https://github.com/sayid-alt"
             target="_blank"
             rel="noopener noreferrer"

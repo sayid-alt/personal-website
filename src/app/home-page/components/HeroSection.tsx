@@ -7,7 +7,7 @@ import Icon from '@/components/ui/AppIcon';
 const stats = [
   { value: '3+', label: 'ML Projects' },
   { value: '3.68', label: 'GPA / 4.00' },
-  { value: '6000+', label: 'Raw Data Processed' },
+  // { value: '6000+', label: 'Raw Data Processed' },
 ];
 
 const socialLinks = [
@@ -25,6 +25,12 @@ const socialLinks = [
   },
   {
     id: 4,
+    label: 'Medium',
+    href: 'https://medium.com/@heykalsayid',
+    icon: 'medium.png',
+  },
+  {
+    id: 5,
     label: 'Email',
     href: 'mailto:heykalsayid@gmail.com',
     icon: 'EnvelopeIcon',

@@ -163,35 +163,6 @@ export default function AboutSkillsSection() {
                   </span>
                 ))}
               </div>
-
-              {/* Decorative data visualization bars */}
-              <div className="mt-8 pt-6 border-t border-white/5">
-                <p className="text-xs text-[#475569] uppercase tracking-wider mb-4 font-semibold">
-                  Core Competencies
-                </p>
-                {[
-                  { label: 'Machine Learning', pct: 90 },
-                  { label: 'Data Visualization', pct: 85 },
-                  { label: 'Python / SQL', pct: 88 },
-                  { label: 'Deep Learning', pct: 78 },
-                ].map((bar) => (
-                  <div key={bar.label} className="mb-3">
-                    <div className="flex justify-between mb-1">
-                      <span className="text-xs text-[#64748B]">{bar.label}</span>
-                      <span className="text-xs text-[#22D3EE] font-medium">{bar.pct}%</span>
-                    </div>
-                    <div className="h-1 rounded-full bg-white/5 overflow-hidden">
-                      <div
-                        className="h-full rounded-full"
-                        style={{
-                          width: `${bar.pct}%`,
-                          background: 'linear-gradient(to right, #22D3EE, #67E8F9)',
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
