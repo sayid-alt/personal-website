@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
+import Icon from '@/components/ui/AppIcon';
 
 const projects = [
   {
@@ -15,7 +16,26 @@ const projects = [
       'Dashboard showing customer churn analysis with geographic heatmap and predictive model results for JB Telco',
     accent: '#22D3EE',
     outcome: 'Retention strategy for telecom churn',
-    link: 'https://www.datascienceportfol.io/heykalsayid/projects/0',
+    projectLinks: [
+      {
+        id: 'notebook',
+        href: 'https://colab.research.google.com/drive/17FODnw-0_EVcG9bTim2lzg9bv0olDF3E?usp=sharing',
+        icon: 'CodeBracketIcon',
+        label: 'Notebook',
+      },
+      {
+        id: 'fulldeck',
+        href: 'https://drive.google.com/file/d/12w7EKZpNfleE9Mjb0MZKvZfv2-QDBOVO/view',
+        icon: 'presentation.png',
+        label: 'Full Deck',
+      },
+      {
+        id: 'insights',
+        href: 'https://public.tableau.com/app/profile/heykal.sayid/viz/JBLinkTelcoChurn/Churn_Dashboard',
+        icon: 'tableau.png',
+        label: 'Dashboard',
+      },
+    ],
   },
   {
     id: 2,
@@ -28,7 +48,32 @@ const projects = [
       'ROI optimization dashboard with customer segments and discount impact visualization in Looker Studio',
     accent: '#F59E0B',
     outcome: 'Revenue optimization via segmentation',
-    link: 'https://www.datascienceportfol.io/heykalsayid/projects/1',
+    projectLinks: [
+      {
+        id: 'github-repo',
+        href: 'https://github.com/sayid-alt/superstore-analysis-with-ml',
+        icon: 'github.png',
+        label: 'GitHub Repo',
+      },
+      {
+        id: 'fulldeck',
+        href: 'https://docs.google.com/presentation/d/1U3l_VQvBTe114QDmjLVftXXmsfqzgbjgXA7ShkEZ2Dc/edit?slide=id.g3cbd730fcec_0_0#slide=id.g3cbd730fcec_0_0',
+        icon: 'presentation.png',
+        label: 'Full Deck',
+      },
+      {
+        id: 'insights',
+        href: 'https://datastudio.google.com/u/0/reporting/7784a25c-5a9e-48e5-9382-2410be9034d5/page/5HWnF',
+        icon: 'looker.png',
+        label: 'Dashboard',
+      },
+      {
+        id: 'streamlit',
+        href: 'https://superstore-dashboard-with-ml.streamlit.app/',
+        icon: 'prediction.png',
+        label: 'Streamlit App',
+      },
+    ],
   },
   {
     id: 3,
@@ -41,7 +86,20 @@ const projects = [
       'Alumni cluster visualization showing 12 behavioral segments with MBTI and interest-based groupings',
     accent: '#A78BFA',
     outcome: '12 behavioral alumni clusters',
-    link: 'https://www.datascienceportfol.io/heykalsayid/projects/2',
+    projectLinks: [
+      {
+        id: 'github-repo',
+        href: 'https://github.com/sayid-alt/member-cluster-recommendation-analysis',
+        icon: 'github.png',
+        label: 'GitHub Repo',
+      },
+      {
+        id: 'fulldeck',
+        href: 'https://drive.google.com/file/d/1S72WO1rPsZYSzOd_q3Pb_ocrN1VnW2oJ/view',
+        icon: 'presentation.png',
+        label: 'Full Deck',
+      },
+    ],
   },
   {
     id: 4,
@@ -55,7 +113,26 @@ const projects = [
       'Time series chart comparing CNN-LSTM and CNN-GRU model predictions for USD to Indonesian Rupiah exchange rate',
     accent: '#34D399',
     outcome: '82.11% MSE reduction · Journal Research',
-    link: 'https://www.datascienceportfol.io/heykalsayid/projects/3',
+    projectLinks: [
+      {
+        id: 'github-repo',
+        href: 'https://github.com/sayid-alt/usd-idr-forecasting',
+        icon: 'github.png',
+        label: 'GitHub Repo',
+      },
+      {
+        id: 'fulldeck',
+        href: 'https://drive.google.com/file/d/1xHme8rEkblcJPMgNVXzzLRlG6H87Ok08/view',
+        icon: 'presentation.png',
+        label: 'Full Deck',
+      },
+      {
+        id: 'paper',
+        href: 'https://drive.google.com/file/d/1sEb908jS-JVHRGraQyPjgBmpFKSpgVCN/view',
+        icon: 'DocumentTextIcon',
+        label: 'Research Paper',
+      },
+    ],
   },
 ];
 
@@ -135,7 +212,6 @@ export default function ProjectsSection() {
               ref={(el) => {
                 cardRefs.current[i] = el;
               }}
-              href={project.link}
               target="_blank"
               className={`reveal reveal-delay-${(i % 3) + 1} group 
                           glass-card rounded-2xl overflow-hidden hover:border-white/10 
@@ -149,11 +225,48 @@ export default function ProjectsSection() {
                   alt={project.imageAlt}
                   width={800}
                   height={400}
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover opacity-80 group-hover:opacity-20 group-hover:scale-105 transition-all duration-700"
                 />
-
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-[#070B14]/30 to-transparent" />
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-[#070B14] via-[#070B14]/30
+                  to-transparent"
+                >
+                  <div className="flex items-end h-full justify-around p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* Project CTA buttons */}
+                    <div
+                      className="flex items-end gap-4"
+                      style={{
+                        animation: 'fadeInUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.65s both',
+                      }}
+                    >
+                      {project.projectLinks.map((link) => (
+                        <div className="flex flex-col group/project-links items-center gap-1">
+                          <div className="flex w-[7ch]">
+                            <p className="text-sm text-[#64748B] text-center leading-relaxed opacity-0 group-hover/project-links:opacity-100 transition-opacity duration-300">
+                              {link.label}
+                            </p>
+                          </div>
+                          <a
+                            key={link.id}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="glass-card w-9 h-9 rounded-full flex items-center justify-center text-[#94A3B8] hover:text-[#22D3EE] hover:border-[#22D3EE]/30 transition-all duration-300 hover:-translate-y-1"
+                            aria-label={link.label}
+                          >
+                            <Icon
+                              name={link.icon}
+                              size={15}
+                              variant="solid"
+                              className="text-white"
+                            />
+                          </a>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
 
                 {/* Outcome badge */}
                 <div className="absolute top-4 right-4 glass-card px-3 py-1 rounded-full">
